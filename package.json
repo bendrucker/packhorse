@@ -1,0 +1,22 @@
+{
+  "name": "packhorse",
+  "version": "1.0.0",
+  "description": "Node API for updating multiple packages",
+  "main": "./src",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bendrucker/packhorse.git"
+  },
+  "keywords": [
+    "package"
+  ],
+  "author": "Ben Drucker <bvdrucker@gmail.com> (http://bendrucker.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bendrucker/packhorse/issues"
+  },
+  "homepage": "https://github.com/bendrucker/packhorse"
+}
