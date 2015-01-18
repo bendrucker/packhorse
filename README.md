@@ -58,6 +58,10 @@ Reads in data for all packages in the pack. Returns a promise that resolves when
 
 Updates data for all packages in the pack. Returns a promise that resolves when all packages have been written.
 
+##### `paths()` -> `Array`
+
+Returns an array containing the paths of each package in the pack.
+
 <hr>
 
 ### `Package`

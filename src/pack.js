@@ -57,4 +57,10 @@ Pack.prototype.set = function () {
   };
 });
 
+Pack.prototype.paths = function () {
+  return this.packages.map(function (pkg) {
+    return pkg.path;
+  });
+};
+
 module.exports = Pack;

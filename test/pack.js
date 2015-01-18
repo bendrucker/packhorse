@@ -86,4 +86,15 @@ describe('Pack', function () {
 
   });
 
+  describe('#paths', function () {
+
+    it('gets the package paths', function () {
+      pack.packages.push(pkg);
+      var paths = pack.paths();
+      expect(paths).to.have.length(1);
+      expect(paths[0]).to.contain('package.json');
+    });
+
+  });
+
 });
