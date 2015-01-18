@@ -21,7 +21,7 @@ Accepts an `Array` of package configuration and loads them into the `Pack`. A pa
   * `path` (string)
   * `optional` (boolean)
 
-The first package will be considered the "leader" for `pack.get` calls. Packages where `optional` is `true` will be excluded if they are not found.
+Paths are resolved relative to the current working directory for the process. The first package will be considered the "leader" for `pack.get` calls. Packages where `optional` is `true` will be excluded if they are not found.
 
 In addition to `load`, `packhorse` exposes the `Pack` and `Package` constructors.
 
