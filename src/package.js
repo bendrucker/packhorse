@@ -4,9 +4,11 @@ var Promise = require('bluebird');
 var fs      = Promise.promisifyAll(require('fs'));
 var indent  = require('detect-indent');
 var extend  = require('xtend/mutable');
+var path    = require('path');
 
-function Package (path) {
-  this.path = path;
+
+function Package (pkgPath) {
+  this.path = path.resolve(process.cwd(), pkgPath);
   this.data = {};
   this.indent = '  ';
 }

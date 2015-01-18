@@ -12,7 +12,7 @@ describe('Pack', function () {
   var pack, pkg, sandbox;
   beforeEach(function () {
     pack = new Pack();
-    pkg = new Package();
+    pkg = new Package('./package.json');
     sandbox = sinon.sandbox.create();
   });
 
@@ -64,7 +64,7 @@ describe('Pack', function () {
   describe('#set', function () {
 
     it('sets on all packages', function () {
-      var pkg2 = new Package();
+      var pkg2 = new Package('./bower.json');
       pack.packages.push(pkg, pkg2);
       pack.set('foo', 'bar');
       expect(pkg.get('foo')).to.equal('bar');

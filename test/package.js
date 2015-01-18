@@ -17,6 +17,10 @@ describe('Package', function () {
     sandbox.restore();
   });
 
+  it('resolves to an absolute path', function () {
+    expect(pkg.path).to.match(/\/package.json$/);
+  });
+
   describe('#get', function () {
 
     it('gets data by property', function () {
@@ -42,7 +46,7 @@ describe('Package', function () {
 
     var readFile;
     beforeEach(function () {
-      readFile = sandbox.stub(fs, 'readFile').withArgs('./package.json');
+      readFile = sandbox.stub(fs, 'readFile');
     });
 
     it('reads the data to JSON', function () {
@@ -68,7 +72,7 @@ describe('Package', function () {
   describe('#write', function () {
 
     it('writes the data as json', function () {
-      sandbox.stub(fs, 'writeFile').withArgs('./package.json').yields(null);
+      sandbox.stub(fs, 'writeFile').yields(null);
       return pkg.write();
     });
 
