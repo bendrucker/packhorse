@@ -12,7 +12,7 @@ $ npm install packhorse
 
 ### `packhorse`
 
-##### `packhorse.load(packages)` -> `Pack`
+##### `packhorse.load(packages)` -> `promise(pack)`
 
 Accepts an `Array` of package configuration and loads them into the `Pack`. A package can be a:
 
@@ -20,6 +20,17 @@ Accepts an `Array` of package configuration and loads them into the `Pack`. A pa
 * an object with:
   * `path` (string)
   * `optional` (boolean)
+ 
+```js
+packhorse.load([
+ './package.json', // required
+ './bower.json', // required
+ {path: './component.json', optional: true} // optional, will be ignored if not present
+])
+.then(function (pack) {
+  // use Pack API
+});
+```
 
 Paths are resolved relative to the current working directory for the process. The first package will be considered the "leader" for `pack.get` calls. Packages where `optional` is `true` will be excluded if they are not found.
 
