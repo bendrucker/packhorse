@@ -1,6 +1,6 @@
 # packhorse [![Build Status](https://travis-ci.org/bendrucker/packhorse.svg?branch=master)](https://travis-ci.org/bendrucker/packhorse)
 
-API for updating multiple packages like `package.json` and `bower.json`git .
+API for updating multiple packages like `package.json` and `bower.json`.
 
 ## Installing
 
