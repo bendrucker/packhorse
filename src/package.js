@@ -30,6 +30,7 @@ Package.prototype.set = function (property, value) {
 Package.prototype.read = function () {
   return fs.readFileAsync(this.path)
     .bind(this)
+    .call('toString')
     .then(function (data) {
       this.indent = indent(data).indent;
       this.data = JSON.parse(data);

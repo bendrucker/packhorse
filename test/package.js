@@ -50,18 +50,18 @@ describe('Package', function () {
     });
 
     it('reads the data to JSON', function () {
-      readFile.yields(null, JSON.stringify({
+      readFile.yields(null, new Buffer(JSON.stringify({
         foo: 'bar'
-      }));
+      })));
       return pkg.read().then(function (pkg) {
         expect(pkg.get('foo')).to.equal('bar');
       });
     });
 
     it('detects indentation', function () {
-      readFile.yields(null, JSON.stringify({
+      readFile.yields(null, new Buffer(JSON.stringify({
         foo: 'bar'
-      }, null, '\t'));
+      }, null, '\t')));
       return pkg.read().then(function (pkg) {
         expect(pkg.indent).to.equal('\t');
       });
