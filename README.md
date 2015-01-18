@@ -66,7 +66,7 @@ Updates data for all packages in the pack. Returns a promise that resolves when 
 
 Gets data from the package stored at `key`. 
 
-##### `set(key [, value])` -> `pack`
+##### `set(key [, value])` -> `package`
 
 Sets a value on the package data. `set` can be called with a key value pair or an object.
 
