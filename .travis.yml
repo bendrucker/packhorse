@@ -1,3 +1,12 @@
 language: node_js
 node_js:
 - '0.10'
+deploy:
+  provider: npm
+  email: bvdrucker@gmail.com
+  api_key:
+    secure: scTfQIW78UM3BNLH+FbkMaYOneLepHAXHSlontivc/AXF9bipXmJAEmx21Hxtsunk8P9TgRg+EOwgY3SiCUtyd79P9CMgBxsSnirX9fxD6v/pDQa74IJvJ/BK49sb3f+KEiVhCg/G9jk9/U18gk7JgtFrFZp0gzs7bFt+lae4eY=
+  on:
+    tags: true
+    all_branches: true
+    repo: bendrucker/packhorse
