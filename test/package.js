@@ -76,6 +76,14 @@ describe('Package', function () {
       return pkg.write();
     });
 
+    it('maintains trailing newlines', function () {
+      pkg.trailing = true;
+      sandbox.stub(fs, 'writeFile').yields(null);
+      return pkg.write().then(function (pkg) {
+        expect(fs.writeFile.firstCall.args[1]).to.equal('{}\n');
+      });
+    });
+
   });
 
 });

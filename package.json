@@ -23,6 +23,7 @@
     "bluebird": "~2.7.1",
     "core-error-predicates": "~1.0.0",
     "detect-indent": "~3.0.0",
+    "trailing-newline": "~1.0.0",
     "xtend": "~4.0.0"
   },
   "devDependencies": {
