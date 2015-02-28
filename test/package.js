@@ -28,12 +28,23 @@ describe('Package', function () {
       expect(pkg.get('foo')).to.equal('bar');
     });
 
+    it('gets data by deep property', function () {
+      pkg.data.foo = {
+        bar: 'baz'
+      };
+      expect(pkg.get('foo.bar')).to.equal('baz');
+    });
+
   });
 
   describe('#set', function () {
 
     it('can set a key/val pair', function () {
       expect(pkg.set('foo', 'bar').get('foo')).to.equal('bar');
+    });
+
+    it('can deeply set a key/val pair', function () {
+      expect(pkg.set('foo.bar', 'baz').get('foo').bar).to.equal('baz');
     });
 
     it('can set an object', function () {

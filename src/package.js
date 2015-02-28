@@ -7,6 +7,7 @@ var extend   = require('xtend/mutable');
 var path     = require('path');
 var trailing = require('trailing-newline');
 var os       = require('os');
+var deep     = require('getobject');
 
 function Package (pkgPath) {
   this.path = path.resolve(process.cwd(), pkgPath);
@@ -16,12 +17,12 @@ function Package (pkgPath) {
 }
 
 Package.prototype.get = function (property) {
-  return this.data[property];
+  return deep.get(this.data, property);
 };
 
 Package.prototype.set = function (property, value) {
   if (typeof property === 'string') {
-    this.data[property] = value;
+    deep.set(this.data, property, value);
   }
   else {
     extend(this.data, property);
