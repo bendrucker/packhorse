@@ -1,4 +1,4 @@
-# packhorse [![Build Status](https://travis-ci.org/bendrucker/packhorse.svg?branch=master)](https://travis-ci.org/bendrucker/packhorse)
+# packhorse [![Build Status](https://travis-ci.org/bendrucker/packhorse.svg?branch=master)](https://travis-ci.org/bendrucker/packhorse) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/packhorse.svg)](https://greenkeeper.io/)
 
 API for updating multiple packages like `package.json` and `bower.json`.
 
