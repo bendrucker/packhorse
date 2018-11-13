@@ -20,17 +20,17 @@
   },
   "homepage": "https://github.com/bendrucker/packhorse",
   "dependencies": {
-    "bluebird": "~2.7.1",
-    "core-error-predicates": "~1.0.0",
-    "detect-indent": "~3.0.0",
+    "bluebird": "~3.5.3",
+    "core-error-predicates": "~1.1.0",
+    "detect-indent": "~5.0.0",
     "getobject": "~0.1.0",
     "trailing-newline": "~1.0.0",
     "xtend": "~4.0.0"
   },
   "devDependencies": {
-    "chai": "~1.10.0",
-    "mocha": "~2.1.0",
-    "sinon": "~1.12.2",
-    "sinon-as-promised": "~2.0.3"
+    "chai": "~4.2.0",
+    "mocha": "~5.2.0",
+    "sinon": "~7.1.1",
+    "sinon-as-promised": "~4.0.3"
   }
 }
